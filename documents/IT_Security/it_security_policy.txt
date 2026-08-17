@@ -1,0 +1,34 @@
+IT SECURITY POLICY
+Document owner: Information Security Team
+Last updated: February 2026
+
+1. PASSWORD REQUIREMENTS
+All employee passwords must be at least 12 characters long and include one
+uppercase letter, one number, and one special character. Passwords must be
+changed every 90 days. Reusing any of the last 5 passwords is not allowed.
+
+2. MULTI-FACTOR AUTHENTICATION (MFA)
+MFA is mandatory for all employees accessing company systems remotely,
+including email, VPN, and internal tools. MFA must be set up within 48 hours
+of receiving system access.
+
+3. DEVICE POLICY
+Only company-issued laptops may be used to access internal systems containing
+confidential data. Personal devices may only access email and calendar
+through the approved mobile app, which enforces remote wipe capability.
+
+4. DATA CLASSIFICATION
+Company data is classified into three levels: Public, Internal, and
+Confidential. Confidential data (customer records, financial data, source
+code) must never be sent over personal email or uploaded to unapproved
+cloud storage services.
+
+5. INCIDENT REPORTING
+Any suspected security incident, including phishing emails or lost devices,
+must be reported to security@company.internal within 1 hour of discovery.
+Failure to report a known incident within 24 hours is treated as a policy
+violation.
+
+6. VPN ACCESS
+VPN access is required to reach internal systems from outside the office
+network. VPN sessions automatically time out after 8 hours of inactivity.

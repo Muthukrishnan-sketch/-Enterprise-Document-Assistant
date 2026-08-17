@@ -1,0 +1,31 @@
+TECHNICAL MANUAL: INDUSTRIAL PUMP MODEL X200
+Document owner: Engineering Team
+Last updated: November 2025
+
+1. OVERVIEW
+The X200 is a centrifugal industrial pump rated for continuous operation
+at flow rates up to 450 liters per minute. It is designed for water
+treatment and light industrial fluid transfer applications.
+
+2. INSTALLATION
+The pump must be installed on a vibration-dampening base and requires a
+minimum clearance of 60cm on all sides for maintenance access. Inlet and
+outlet piping must not exceed a 15-degree bend within 1 meter of the
+pump housing.
+
+3. WARRANTY
+The X200 carries a 24-month manufacturer warranty from the date of
+installation, covering parts and labor for manufacturing defects. The
+warranty is extendable to 36 months when the pump is serviced under the
+annual maintenance contract.
+
+4. MAINTENANCE SCHEDULE
+Routine inspection is required every 3 months. Impeller replacement is
+recommended every 18-24 months under normal operating conditions, or
+every 12 months in high-particulate environments.
+
+5. TROUBLESHOOTING
+If the pump loses prime, check the suction line for air leaks first.
+Unusual vibration during operation usually indicates impeller imbalance
+or a failing bearing, and the unit should be shut down within 24 hours
+to prevent seal damage.

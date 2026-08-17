@@ -1,0 +1,28 @@
+NEW EMPLOYEE ONBOARDING GUIDE
+Document owner: People Operations
+Last updated: April 2026
+
+1. BEFORE DAY ONE
+IT will ship your laptop 3-5 business days before your start date. You will
+receive a welcome email with your company email address and instructions to
+set up multi-factor authentication (see IT Security Policy).
+
+2. FIRST WEEK
+Your manager will schedule a 1:1 within your first 2 days. All new
+employees must complete mandatory compliance training (data privacy,
+security awareness, code of conduct) within the first 7 days.
+
+3. BENEFITS ENROLLMENT
+Health insurance, retirement plan, and other benefits must be enrolled
+within 30 days of your start date. Missing this window means waiting until
+the next open enrollment period, unless you have a qualifying life event.
+
+4. PROBATION PERIOD
+All new hires have a 90-day probation period, during which either party may
+end employment with 1 week's notice. Performance check-ins happen at the
+30-day and 60-day marks.
+
+5. ACCESS AND TOOLS
+Access to internal tools (Slack, Jira, the HR portal) is provisioned
+automatically on day one. Access to systems containing confidential data
+requires manager approval and is provisioned within 48 hours of request.

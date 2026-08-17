@@ -1,0 +1,23 @@
+# Secrets - NEVER commit these
+.env
+.streamlit/secrets.toml
+
+# Generated data - rebuilt on first run, not source code
+faiss_index.bin
+chunk_metadata.json
+chat_history.db
+users.db
+*.db-journal
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
