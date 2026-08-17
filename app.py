@@ -165,10 +165,35 @@ if st.session_state.user is None:
     st.caption("Sign in to continue.")
 
     if auth_store.user_count() == 0:
-        st.warning(
-            "No user accounts exist yet. In a terminal (not this browser), run:\n\n"
-            "`python manage_users.py`\n\n"
-            "to create the first admin account, then come back and reload this page."
+        st.info(
+            "No user accounts exist yet - create the first one below. It "
+            "automatically becomes an admin (sees every department). This "
+            "form only ever appears when there are zero accounts - once one "
+            "exists, every account after it is created from the **Manage "
+            "users** panel by an existing admin, not here."
+        )
+        with st.form("bootstrap_admin_form"):
+            first_username = st.text_input("Choose a username")
+            first_password = st.text_input("Choose a password", type="password")
+            first_password_confirm = st.text_input("Confirm password", type="password")
+            bootstrap_submitted = st.form_submit_button("Create admin account", type="primary")
+
+        if bootstrap_submitted:
+            if not first_username or not first_password:
+                st.error("Username and password are both required.")
+            elif first_password != first_password_confirm:
+                st.error("Passwords don't match.")
+            else:
+                try:
+                    auth_store.create_user(first_username, first_password, "ALL")
+                    st.success(f"Admin account '{first_username}' created - log in below.")
+                    st.rerun()
+                except ValueError as e:
+                    st.error(str(e))
+
+        st.caption(
+            "Running this locally instead? You can also run "
+            "`python manage_users.py` in a terminal to do the same thing."
         )
         st.stop()
 
