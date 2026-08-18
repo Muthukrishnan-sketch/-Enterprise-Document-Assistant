@@ -131,6 +131,21 @@ CUSTOM_CSS = """
                    border-radius:6px; padding:8px 10px; margin:8px 0 4px 0; line-height:1.6; }
 .preset-summary b { color:#EDEDEA; }
 .preset-desc { font-size:0.78rem; color:#8B93A3; margin:2px 0 10px 0; line-height:1.5; }
+.source-path { font-weight:600; word-break: break-word; overflow-wrap: anywhere; }
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+    section[data-testid="stSidebar"],
+    [data-testid="stSidebarContent"] {
+        width: 100vw !important;
+        min-width: 100vw !important;
+        max-width: 100vw !important;
+    }
+    .source-card { padding: 10px 12px; }
+    .source-card-header { gap: 6px; }
+    .cite-badge { font-size: 0.66rem; padding: 1px 6px; }
+    [data-testid="stChatInput"] textarea { font-size: 16px; }
+}
 </style>
 """
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
