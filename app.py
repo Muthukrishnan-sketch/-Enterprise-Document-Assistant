@@ -120,7 +120,7 @@ CUSTOM_CSS = """
                padding:12px 16px; border-radius:8px; margin-bottom:12px; }
 .source-card-header { display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
 .source-folder-badge { font-size:0.68rem; font-weight:700; padding:2px 9px; border-radius:9px; letter-spacing:0.03em; }
-.source-path { font-weight:600; }
+.source-path { font-weight:600; word-break: break-word; overflow-wrap: anywhere; }
 .source-meta { color:#8B93A3; font-size:0.78rem; }
 .source-text { color:#C7CBD3; font-size:0.85rem; line-height:1.55; margin-bottom:8px; white-space:pre-wrap; }
 .relevance-track { background:rgba(255,255,255,0.08); border-radius:4px; height:5px; width:100%; overflow:hidden; }
@@ -131,15 +131,26 @@ CUSTOM_CSS = """
                    border-radius:6px; padding:8px 10px; margin:8px 0 4px 0; line-height:1.6; }
 .preset-summary b { color:#EDEDEA; }
 .preset-desc { font-size:0.78rem; color:#8B93A3; margin:2px 0 10px 0; line-height:1.5; }
-.source-path { font-weight:600; word-break: break-word; overflow-wrap: anywhere; }
 
 /* ---- Mobile ---- */
 @media (max-width: 640px) {
-    section[data-testid="stSidebar"],
-    [data-testid="stSidebarContent"] {
+    /* Only force full width while the sidebar is actually OPEN.
+       Streamlit marks that with aria-expanded="true" on the sidebar
+       itself - leaving the collapsed state untouched lets Streamlit's
+       own JS close it properly instead of us fighting its transition. */
+    section[data-testid="stSidebar"][aria-expanded="true"] {
         width: 100vw !important;
         min-width: 100vw !important;
         max-width: 100vw !important;
+    }
+    /* Relative to its parent, NOT the viewport - so this never claims
+       100vw on its own regardless of open/collapsed state. This was
+       the actual bug: pinning it to 100vw unconditionally made it
+       ignore the collapse animation entirely and overflow out of it. */
+    [data-testid="stSidebarContent"] {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
     }
     .source-card { padding: 10px 12px; }
     .source-card-header { gap: 6px; }
